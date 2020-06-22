@@ -1,0 +1,46 @@
+body {
+  font-family: 'Baskervville', serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #231f20; 
+  background-color: #fbfbf7;
+}
+
+section {
+  border-top: #ead187 5px solid;
+  border-radius: 5px;
+  padding-top: 0.5em;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  color: #ead187;
+}
+
+h1 {
+  font-size: 2.5 em;
+}
+
+ul strong {
+  color: #f95738;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #f95738;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ead187;
+}
+
+q {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
