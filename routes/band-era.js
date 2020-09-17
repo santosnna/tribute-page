@@ -1,16 +1,16 @@
 const express = require('express');
 const path = require('path');
 
-const bandEraRoute = require('./band-era');
-
 const router = express.Router();
 
 module.exports = () => {
   router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/pages/index.html'));
+    res.send('band-era page');
   });
 
-  router.use(bandEraRoute());
+  router.get('/:bandera', (req, res) => {
+    res.sendFile(path.join(__dirname, `../views/pages/${req.params.bandera}.html`));
+  });
 
   return router;
 };
