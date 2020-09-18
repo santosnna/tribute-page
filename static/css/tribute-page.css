@@ -21,7 +21,7 @@ a:hover {
   color: #ead187;
 }
 
-article {
+section {
   border-top: #ead187 5px solid;
   border-radius: 5px;
   padding-top: 0.5em;
@@ -32,8 +32,11 @@ h1,
 h2,
 h3 {
   font-family: "Cinzel", serif;
-  font-weight: 400;
   color: #ead187;
+}
+
+cite {
+  font-style: normal;
 }
 
 ul {
@@ -45,6 +48,17 @@ strong {
   color: #f95738;
 }
 
-cite {
-  font-style: normal;
+footer {
+  font-size: 1em;
+  color: #f95738;
+  border-top: #ead187 2px solid;
+  border-radius: 5px;
+  padding-top: 0.5em;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
