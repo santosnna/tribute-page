@@ -1,0 +1,55 @@
+{
+  "formations": [
+    {
+      "title": "Peter Green Era (1967 - 1970)",
+      "member": "Peter Green",
+      "shortname": "peter-green",
+      "summary": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque error architecto ea aperiam necessitatibus facilis asperiores hic nemo",
+      "details": [
+        {
+          "year": "1968",
+          "fact": "Fleetwood Mac first studio album, self-titled"
+        },
+        {
+          "year": "1970",
+          "fact": "Peter Green left the band"
+        }
+      ],
+      "picture": "fm-peter-green.jpg"
+    },
+    {
+      "title": "Bob Welche Era (1971 - 1974)",
+      "member": "Bob Welche",
+      "shortname": "bob-welche",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ea cum reiciendis a nemo quas fuga quod at beatae! Nemo a beatae adipisc",
+      "details": [
+        {
+          "year": "1971",
+          "fact": "Future Games, fifth studio album."
+        },
+        {
+          "year": "1974",
+          "fact": "Bob Welch left the band."
+        }
+      ],
+      "picture": "fm-bob-welche.jpg"
+    },
+    {
+      "title": "Lindsey Buckingham and Stevie Nicks Era (1974 - latest)",
+      "member": "Lindsey Buckingham and Stevie Nicks",
+      "shortname": "buckingham-nicks",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eveniet saepe possimus! Quas non, voluptate ipsum voluptatum eum, quasi",
+      "details": [
+        {
+          "year": "1975",
+          "fact": "Fleetwood Mac, tenth studio album and the second self-titled record in their discography."
+        },
+        {
+          "year": "1977",
+          "fact": "release of Rumours, their elenventh studio album."
+        }
+      ],
+      "picture": "fm-buckingham-nicks.jpg"
+    }
+  ]
+}

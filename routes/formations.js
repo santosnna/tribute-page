@@ -2,24 +2,29 @@ const express = require('express');
 
 const router = express.Router();
 
-const getPageTitle = (name) => {
-  switch (name) {
-    case 'peter-green':
-      return 'Peter Green Era (1967 - 1970)';
-    case 'bob-welche':
-      return 'Bob Welche Era (1971 - 1974)';
-    case 'buckingham-nicks':
-      return 'Lindsey Buckingham and Stevie Nicks Era (1974 - latest)';
-    default:
-      return 'Fleetwood Mac'
-  }
-};
+module.exports = (params) => {
 
-module.exports = () => {
-  router.get('/:formation', (req, res) => {
+  const {
+    formationService
+  } = params;
+
+  router.get('/', async (req, res) => {
+    const formation = await formationService.getList();
+
     res.render('layout', {
-      pageTitle: getPageTitle(req.params.formation),
-      template: req.params.formation
+      pageTitle: 'Formations',
+      template: 'formations',
+      formation
+    });
+  });
+
+  router.get('/:shortname', async (req, res) => {
+    const formation = await formationService.getFormation(req.params.shortname);
+
+    res.render('layout', {
+      pageTitle: formation.title,
+      template: 'formation-detail',
+      formation
     });
   });
 

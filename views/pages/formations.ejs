@@ -1,0 +1,25 @@
+<div class="container">
+  <article>
+    <% formation.forEach(function (formation) { %>
+    <div class="mb-4">
+      <a href="/formations/<%=formation.shortname%>">
+        <h2><%=formation.title%></h2>
+      </a>
+      <div class="row mt-2">
+        <div class="col-sm-4">
+          <a href="/formations/<%=formation.shortname%>">
+            <img class="rouded" src="/img/fm-<%=formation.shortname%>.jpg" alt="Photo of <%=formation.member%> Era">
+          </a>
+        </div>
+        <div class="col-sm-8">
+          <p>
+            <%=formation.summary%>
+          </p>
+          <p><em>Consider loading some album covers here</em></p>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+
+  </article>
+</div>

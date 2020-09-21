@@ -4,14 +4,22 @@ const formationRoute = require('./formations');
 
 const router = express.Router();
 
-module.exports = () => {
-  router.get('/', (req, res) => {
+module.exports = (params) => {
+
+  const {
+    formationService
+  } = params;
+
+  router.get('/', async (req, res) => {
+    const formations = await formationService.getList();
+
     res.render('layout', {
       pageTitle: 'Fletwood Mac',
-      template: 'index'
+      template: 'index',
+      formations
     });
   });
 
-  router.use(formationRoute());
+  router.use('/formations', formationRoute(params));
   return router;
 };
