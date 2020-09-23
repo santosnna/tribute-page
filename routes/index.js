@@ -1,4 +1,7 @@
 const express = require('express');
+const {
+  NotExtended
+} = require('http-errors');
 
 const formationRoute = require('./formations');
 
@@ -10,14 +13,18 @@ module.exports = (params) => {
     formationService
   } = params;
 
-  router.get('/', async (req, res) => {
-    const formations = await formationService.getList();
+  router.get('/', async (req, res, next) => {
+    try {
+      const formations = await formationService.getList();
 
-    res.render('layout', {
-      pageTitle: 'Fletwood Mac',
-      template: 'index',
-      formations
-    });
+      return res.render('layout', {
+        pageTitle: 'Fletwood Mac',
+        template: 'index',
+        formations
+      });
+    } catch (err) {
+      return next(err);
+    }
   });
 
   router.use('/formations', formationRoute(params));

@@ -8,24 +8,32 @@ module.exports = (params) => {
     formationService
   } = params;
 
-  router.get('/', async (req, res) => {
-    const formation = await formationService.getList();
+  router.get('/', async (req, res, next) => {
+    try {
+      const formation = await formationService.getList();
 
-    res.render('layout', {
-      pageTitle: 'Formations',
-      template: 'formations',
-      formation
-    });
+      return res.render('layout', {
+        pageTitle: 'Formations',
+        template: 'formations',
+        formation
+      });
+    } catch (err) {
+      return next(err);
+    }
   });
 
-  router.get('/:shortname', async (req, res) => {
-    const formation = await formationService.getFormation(req.params.shortname);
+  router.get('/:shortname', async (req, res, next) => {
+    try {
+      const formation = await formationService.getFormation(req.params.shortname);
 
-    res.render('layout', {
-      pageTitle: formation.title,
-      template: 'formation-detail',
-      formation
-    });
+      return res.render('layout', {
+        pageTitle: formation.title,
+        template: 'formation-detail',
+        formation
+      });
+    } catch (err) {
+      return next(err);
+    }
   });
 
   return router;
