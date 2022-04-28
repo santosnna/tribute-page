@@ -1,0 +1,33 @@
+<div class="container">
+  <section>
+    <article>
+      <h1><%=formation.title%></h1>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="/img/fm-<%=formation.shortname%>.jpg" class="img-thumbnail"
+            alt="Fleetwood Mac with <%= formation.member %> formation">
+        </div>
+        <div class="col-md-8">
+          <p>
+            <span>Summary of this fase</span>
+            <br>
+            <%= formation.summary %>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <article>
+      <ul>
+        <% formation.details.forEach(function (detail) { %>
+        <li>
+          <strong><%=detail.year%>:</strong> <%=detail.fact%>
+        </li>
+        <% }); %>
+      </ul>
+
+    </article>
+  </section>
+</div> <!-- /container -->

@@ -1,0 +1,22 @@
+<article class="mt-2">
+  <div class="container">
+    <a href="/formations">
+      <h2>Formations</h2>
+    </a>
+    <div class="row">
+      <% memberNames.forEach(function (formation) { %>
+      <div class="col-md-4">
+        <div>
+          <a href="/formations/<%=formation.shortname%>"><%=formation.member%></a>
+        </div>
+        <p class="mt-2">
+          <a href="#">
+            <img class="rounded" src="/img/fm-<%=formation.shortname%>.jpg" alt="Photo of <%=formation.member%> Era">
+          </a>
+        </p>
+      </div>
+      <% }); %>
+
+    </div>
+  </div>
+</article>

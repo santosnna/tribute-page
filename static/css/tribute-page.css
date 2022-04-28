@@ -1,0 +1,64 @@
+body {
+  font-family: "Baskervville", serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5;
+  color: #231f20;
+  background-color: #fbfbf7;
+}
+
+header .jumbotron {
+  height: 50vh;
+  background: url(../img/fm-cover-logo.jpg) no-repeat center;
+}
+
+a {
+  text-decoration: none;
+  color: #f95738;
+}
+
+a:hover {
+  color: #ead187;
+}
+
+section {
+  border-top: #ead187 5px solid;
+  border-radius: 5px;
+  padding-top: 0.5em;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  color: #ead187;
+}
+
+cite {
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+strong {
+  color: #f95738;
+}
+
+footer {
+  font-size: 1em;
+  color: #f95738;
+  border-top: #ead187 2px solid;
+  border-radius: 5px;
+  padding-top: 0.5em;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

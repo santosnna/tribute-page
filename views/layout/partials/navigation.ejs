@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-md bg-light">
+  <div class="container">
+    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+      aria-expanded="false"> <span class="sr-only"></span>
+      &#x2630;</button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item px-lg-2"><a href="/" class="nav-link">Home</a></li>
+
+        <% memberNames.forEach(function (member) { %>
+        <li class="nav-item px-lg-2"><a href="/formations/<%=member.shortname%>" class="nav-link"><%=member.member%></a>
+        </li>
+        <% }); %>
+
+      </ul>
+    </div>
+  </div>
+
+</nav>
