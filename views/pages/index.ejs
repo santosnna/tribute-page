@@ -1,41 +1,70 @@
 <div class="container">
-  <section>
-    <h1 class="d-none d-sm-block display-4">Fleetwood Mac</h1>
-    <div class="row">
-      <div class="col-lg-6">
-        <img src="./img/fm-cover.jpg" class="img-thumbnail" alt="Fleetwood Mac in late 70's">
-      </div>
-      <div class="col-lg-6">
-        <p>Fleetwood Mac is a band formed in London by Mick Fleetwood and John &quot;Mac&quot; McVie .
-          They
-          have been
-          active since 1967 and have had several formations over the years. Some of its former members are Peter Green
-          and
-          Bob
-          Welche. But it was with Lindsey Buckingham and Stevie Nicks as band members that they released their most
-          commercially successful studio albums. Among these is Rumours, which topped American and British charts
-          and has been included in multiple lists of the best albums.
-        </p>
-      </div>
+	<section>
+		<h1 class="d-none d-sm-block display-4"><%= homepage.header %></h1>
+		<div class="row">
+			<div class="col-lg-6">
+				<img
+					src="./img/<%= homepage.picture %>"
+					class="img-thumbnail"
+					alt="<%= homepage.pictureAlt %>"
+				/>
+			</div>
+			<div class="col-lg-6">
+				<p><%- homepage.description %></p>
+			</div>
+		</div>
+	</section>
 
-      <%- include('./partials/allFormations') %>
+	<!--  FORMATIONS -->
+	<section class="mt-2">
+		<a href="/formations">
+			<h2>Formations</h2>
+		</a>
+		<div class="row">
+			<% for(const member of membersList) { %>
+			<div class="col-md-4">
+				<a href="/formations/<%=member.shortname%>">
+					<h3><%= member.member %> Era</h3>
+					<img
+						class="img-thumbnail"
+						src="/img/<%=member.picture%>"
+						alt="Photo of <%=member.member%> Era"
+					/>
+				</a>
+			</div>
+			<% } %>
+		</div>
+	</section>
 
-    </div>
+	<!-- ALBUMS -->
+	<section class="mt-2">
+		<a href="#">
+			<h2>Albums</h2>
+		</a>
+		<div class="row">
+			<% for(const album of albumsList) { %>
+			<div class="col-md-4">
+				<a href="#">
+					<h3><%= album.name %></h3>
+					<img
+						class="img-thumbnail"
+						src="/img/<%=album.cover%>"
+						alt="Photo of <%=album.name%> Era"
+					/>
+				</a>
+			</div>
+			<% } %>
+		</div>
+	</section>
 
-    <hr>
+	<hr />
 
-    <aside class="d-flex justify-content-end">
-      <blockquote>
-        <q class="font-italic">If you wake up and don&apos;t want to smile
-          <br>If it takes just a little while
-          <br>Open your eyes and look at the day
-          <br>You&apos;ll see things in a different way
-        </q>
-        <br>
-        <!-- <footer> -->
-        <cite class="font-weight-bold">Fleetwood Mac - Don&apos;t Stop</cite>
-        <!-- </footer> -->
-      </blockquote>
-    </aside>
-  </section>
-</div> <!-- /container -->
+	<aside class="d-flex justify-content-end">
+		<blockquote>
+			<q class="font-italic"><%- homepage.blockquote %> </q>
+			<br />
+			<cite class="font-weight-bold"><%- homepage.cite %></cite>
+		</blockquote>
+	</aside>
+</div>
+<!-- /container -->

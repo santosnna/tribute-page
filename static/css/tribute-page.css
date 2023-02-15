@@ -57,6 +57,10 @@ footer {
   margin-bottom: 1rem;
 }
 
+.mini {
+  height: 100px;
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 2rem;

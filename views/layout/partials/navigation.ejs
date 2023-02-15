@@ -1,20 +1,55 @@
-<nav class="navbar navbar-expand-md bg-light">
-  <div class="container">
-    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse"
-      aria-expanded="false"> <span class="sr-only"></span>
-      &#x2630;</button>
+<header>
+	<a href="/">
+		<div class="jumbotron"></div>
+	</a>
 
-    <div class="collapse navbar-collapse justify-content-center" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="nav-item px-lg-2"><a href="/" class="nav-link">Home</a></li>
+	<nav class="navbar navbar-expand-md bg-light">
+		<div class="container">
+			<button
+				type="button"
+				class="navbar-toggler collapsed"
+				data-toggle="collapse"
+				data-target="#navbar-collapse"
+				aria-expanded="false"
+			>
+				<span class="sr-only"></span> &#x2630;
+			</button>
 
-        <% memberNames.forEach(function (member) { %>
-        <li class="nav-item px-lg-2"><a href="/formations/<%=member.shortname%>" class="nav-link"><%=member.member%></a>
-        </li>
-        <% }); %>
-
-      </ul>
-    </div>
-  </div>
-
-</nav>
+			<div
+				class="collapse navbar-collapse justify-content-center"
+				id="navbar-collapse"
+			>
+				<ul class="nav navbar-nav">
+					<li class="nav-item px-lg-2">
+						<a href="/" class="nav-link">Home</a>
+					</li>
+					<li>
+						<div class="btn-group">
+							<button type="button" class="btn">
+								<a href="/formations" class="nav-link">Formations</a>
+							</button>
+							<button
+								type="button"
+								class="btn dropdown-toggle dropdown-toggle-split"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<% memberNames.forEach(function (member) { %>
+								<a
+									class="dropdown-item nav-link"
+									href="/formations/<%=member.shortname%>"
+									><%=member.member%></a
+								>
+								<% }); %>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>

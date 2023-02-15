@@ -1,32 +1,30 @@
-const express = require('express');
-const {
-  NotExtended
-} = require('http-errors');
+const express = require("express");
 
-const formationRoute = require('./formations');
+const formationRoute = require("./formations");
 
 const router = express.Router();
 
 module.exports = (params) => {
+	const { homePageService, formationService } = params;
 
-  const {
-    formationService
-  } = params;
+	router.get("/", async (req, res, next) => {
+		try {
+			const homepage = await homePageService.getData();
+			const membersList = await formationService.getMembersList();
+			const albumsList = await formationService.getAlbumsList();
 
-  router.get('/', async (req, res, next) => {
-    try {
-      const formations = await formationService.getList();
+			return res.render("layout", {
+				pageTitle: "Fletwood Mac",
+				template: "index",
+				homepage,
+				membersList,
+				albumsList,
+			});
+		} catch (err) {
+			return next(err);
+		}
+	});
 
-      return res.render('layout', {
-        pageTitle: 'Fletwood Mac',
-        template: 'index',
-        formations
-      });
-    } catch (err) {
-      return next(err);
-    }
-  });
-
-  router.use('/formations', formationRoute(params));
-  return router;
+	router.use("/formations", formationRoute(params));
+	return router;
 };

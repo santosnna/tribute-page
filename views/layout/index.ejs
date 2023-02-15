@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Tribute Page | <%= pageTitle %></title>
-
-  <%- include('./partials/head-links') %>
-
-</head>
-
-<body>
-  <header>
-    <a href="/">
-      <div class="jumbotron"></div>
-    </a>
-
-    <%- include('./partials/navigation') %>
-
-  </header>
-
-  <%- include(`../pages/${template}`) %>
-
-  <%- include('./partials/footer') %>
-
-</body>
-
-<%- include('./partials/scripts') %>
-
-</html>
+<%- include('./partials/header') %>
+<%- include('./partials/navigation') %>
+<%- include(`../pages/${template}`) %>
+<%- include('./partials/footer') %>

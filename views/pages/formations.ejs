@@ -1,25 +1,39 @@
 <div class="container">
-  <article>
-    <% formation.forEach(function (formation) { %>
-    <div class="mb-4">
-      <a href="/formations/<%=formation.shortname%>">
-        <h2><%=formation.title%></h2>
-      </a>
-      <div class="row mt-2">
-        <div class="col-sm-4">
-          <a href="/formations/<%=formation.shortname%>">
-            <img class="rouded" src="/img/fm-<%=formation.shortname%>.jpg" alt="Photo of <%=formation.member%> Era">
-          </a>
-        </div>
-        <div class="col-sm-8">
-          <p>
-            <%=formation.summary%>
-          </p>
-          <p><em>Consider loading some album covers here</em></p>
-        </div>
-      </div>
-    </div>
-    <% }); %>
-
-  </article>
+	<section>
+		<article>
+			<h1 class="d-none d-sm-block display-4">Formations</h1>
+			<% for(formation of formationsList) {%>
+			<div class="my-4">
+				<a href="/formations/<%= formation.shortname %>">
+					<h2><%= formation.member %> Era (duration)</h2>
+				</a>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="/formations/<%= formation.shortname %>">
+						<img
+							class="rouded"
+							src="/img/<%= formation.picture %>"
+							alt="Photo of <%= formation.member %> Era"
+						/>
+					</a>
+				</div>
+				<div class="col-sm-8 pl-lg-4">
+					<h3>Summary</h3>
+					<p><%=formation.summary%></p>
+					<h3>Albums</h3>
+					<% for(const album of formation.albums) { %>
+					<a href="#">
+						<img
+							class="mini img-thumbnail"
+							src="/img/<%= album.cover %>"
+							alt="Photo of <%= album.name%>"
+						/>
+					</a>
+					<% } %>
+				</div>
+			</div>
+			<% } %>
+		</article>
+	</section>
 </div>

@@ -1,0 +1,61 @@
+{
+	"formations": [
+		{
+			"member": "Peter Green",
+			"shortname": "peter-green",
+			"summary": "lorem ipsum",
+			"picture": "fm-peter-green.jpg",
+			"details": [
+				{
+					"fact": "lorem ipsum",
+					"year": 1969
+				}
+			],
+			"albums": [
+				{
+					"name": "Fleetwood Mac (Self-titled I)",
+					"released": 1968,
+					"cover": "fm-st1.jpg"
+				}
+			]
+		},
+		{
+			"member": "Bob Welche",
+			"shortname": "bob-welche",
+			"summary": "lorem ipsum",
+			"picture": "fm-bob-welche.jpg",
+			"details": [
+				{
+					"fact": "lorem ipsum",
+					"year": 1972
+				}
+			],
+			"albums": [
+				{
+					"name": "Mistery to Me",
+					"released": 1973,
+					"cover": "fm-mistery-to-me.jpg"
+				}
+			]
+		},
+		{
+			"member": "Buckingham & Nicks",
+			"shortname": "buckingham-nicks",
+			"summary": "lorem ipsum",
+			"picture": "fm-buckingham-nicks.jpg",
+			"details": [
+				{
+					"fact": "lorem ipsum",
+					"year": 1974
+				}
+			],
+			"albums": [
+				{
+					"name": "Fleetwood Mac (Self-titled II)",
+					"released": 1975,
+					"cover": "fm-st2.jpg"
+				}
+			]
+		}
+	]
+}
