@@ -3,6 +3,7 @@
 		{
 			"member": "Peter Green",
 			"shortname": "peter-green",
+			"duration": "1967 - 1970",
 			"summary": "lorem ipsum",
 			"picture": "fm-peter-green.jpg",
 			"details": [
@@ -15,13 +16,24 @@
 				{
 					"name": "Fleetwood Mac (Self-titled I)",
 					"released": 1968,
-					"cover": "fm-st1.jpg"
+					"cover": "fm-self-ttitled-1.jpg"
+				},
+				{
+					"name": "Mr. Wonderful",
+					"released": 1968,
+					"cover": "fm-mr-wonderful.jpg"
+				},
+				{
+					"name": "The Play On",
+					"released": 1969,
+					"cover": "fm-then-play-on.jpg"
 				}
 			]
 		},
 		{
 			"member": "Bob Welche",
 			"shortname": "bob-welche",
+			"duration": "1970 - 1974",
 			"summary": "lorem ipsum",
 			"picture": "fm-bob-welche.jpg",
 			"details": [
@@ -32,6 +44,21 @@
 			],
 			"albums": [
 				{
+					"name": "Future Games",
+					"released": 1971,
+					"cover": "fm-future-games.jpg"
+				},
+				{
+					"name": "Bare Trees",
+					"released": 1972,
+					"cover": "fm-bare-trees.jpg"
+				},
+				{
+					"name": "Penguin",
+					"released": 1973,
+					"cover": "fm-penguim.jpg"
+				},
+				{
 					"name": "Mystery to Me",
 					"released": 1973,
 					"cover": "fm-mistery-to-me.jpg"
@@ -41,6 +68,7 @@
 		{
 			"member": "Buckingham & Nicks",
 			"shortname": "buckingham-nicks",
+			"duration": "1974 - Onward",
 			"summary": "lorem ipsum",
 			"picture": "fm-buckingham-nicks.jpg",
 			"details": [
@@ -53,7 +81,22 @@
 				{
 					"name": "Fleetwood Mac (Self-titled II)",
 					"released": 1975,
-					"cover": "fm-st2.jpg"
+					"cover": "fm-self-ttitled-2.jpg"
+				},
+				{
+					"name": "Rumours",
+					"released": 1977,
+					"cover": "fm-rumours.jpg"
+				},
+				{
+					"name": "Tusk",
+					"released": 1979,
+					"cover": "fm-tusk.jpg"
+				},
+				{
+					"name": "Mirage",
+					"released": 1982,
+					"cover": "fm-mirage.jpg"
 				}
 			]
 		}
