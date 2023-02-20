@@ -38,13 +38,13 @@
 
 	<!-- ALBUMS -->
 	<section class="mt-2">
-		<a href="#">
+		<a href="/albums">
 			<h2>Albums</h2>
 		</a>
 		<div class="row">
 			<% for(const album of albumsList) { %>
 			<div class="col-md-4">
-				<a href="#">
+				<a href="/albums/<%= album.name %>">
 					<h3><%= album.name %></h3>
 					<img
 						class="img-thumbnail"

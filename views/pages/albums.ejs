@@ -1,0 +1,31 @@
+<div class="container">
+	<section>
+		<article>
+			<h1 class="d-none d-sm-block display-4">Albums</h1>
+			<% for(formation of formationsList) {%>
+			<div class="my-4">
+				<h2>
+					Recorded with
+					<a href="/formations/<%= formation.shortname %>"
+						><%= formation.member %></a
+					>
+					<!-- AINDA NÃO SEI SE VOU DEIXAR ESSE LINK... -->
+				</h2>
+				<div class="row">
+					<% for(const album of formation.albums) { %>
+					<div class="col-sm-4">
+						<a href="/albums/<%= album.name %>">
+							<img
+								class="img-thumbnail"
+								src="/img/<%= album.cover %>"
+								alt="Photo of <%= album.name%>"
+							/>
+						</a>
+					</div>
+					<% } %>
+				</div>
+			</div>
+			<% } %>
+		</article>
+	</section>
+</div>

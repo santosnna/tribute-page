@@ -19,6 +19,25 @@ class FormationService {
 	}
 
 	/**
+	 * Get album information provided a name
+	 * @param {*} name
+	 */
+	async getAlbum(name) {
+		const data = await this.getAlbumsList();
+		const album = data.find((element) => {
+			return element.name === name;
+		});
+
+		console.log(album);
+		if (!album) return null;
+		return {
+			name: album.name,
+			released: album.released,
+			cover: album.cover,
+		};
+	}
+
+	/**
 	 * Get formation information provided a shortname
 	 * @param {*} shortname
 	 */

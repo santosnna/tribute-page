@@ -23,7 +23,7 @@
 					<p><%=formation.summary%></p>
 					<h3>Albums</h3>
 					<% for(const album of formation.albums) { %>
-					<a href="#">
+					<a href="/albums/<%= album.name %>">
 						<img
 							class="mini img-thumbnail"
 							src="/img/<%= album.cover %>"

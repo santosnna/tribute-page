@@ -31,8 +31,7 @@
 			<h2>Albums from this phase</h2>
 			<div class="row">
 				<% for(const album of formation.albums) {%>
-					<a href="#">
-
+					<a href="/albums/<%= album.name %>">
 						<div class="col-md-4">
 							<img
 							src="/img/<%= album.cover %>"

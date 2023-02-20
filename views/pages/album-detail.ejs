@@ -1,0 +1,31 @@
+<div class="container">
+	<section>
+		<article>
+			<h1><%= album.name %> (<%= album.released %>)</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<img
+						src="/img/<%= album.cover %>"
+						class="img-thumbnail"
+						alt="Cover of <%= album.name %>"
+					/>
+				</div>
+				<div class="col-md-8 pl-lg-4">
+					<p>
+						Something about the album such as which # was it (e.g: 1st, 2nd, 3rd studio album)
+					</p>
+						<hr /> 
+						<p>					
+            <ul>
+							Maybe track list info
+							<li><strong>Track #:</strong> Song</li>
+							<li><strong>Track #:</strong> Song</li>
+							<li><strong>Track #:</strong> Song</li>
+            </ul>
+					</p>
+				</div>
+			</div>
+			</article>
+	</section>
+</div>
+<!-- /container -->

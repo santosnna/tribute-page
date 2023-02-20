@@ -1,8 +1,6 @@
-const express = require("express");
-
+const router = require("express").Router();
 const formationRoute = require("./formations");
-
-const router = express.Router();
+const albumsRoute = require("./albums");
 
 module.exports = (params) => {
 	const { homePageService, formationService } = params;
@@ -26,5 +24,6 @@ module.exports = (params) => {
 	});
 
 	router.use("/formations", formationRoute(params));
+	router.use("/albums", albumsRoute(params));
 	return router;
 };
