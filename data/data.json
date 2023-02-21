@@ -1,4 +1,13 @@
 {
+	"homepage": {
+		"header": "Fleetwood Mac",
+		"picture": "fm-cover.jpg",
+		"pictureAlt": "Fleetwood Mac in late 70&apos;s",
+		"description": "Fleetwood Mac is a band formed in London by Mick Fleetwood and John &quot;Mac&quot; McVie. They have been active since 1967 and have had several formations over the years. Some of its former members are Peter Green and Bob Welche. But it was with Lindsey Buckingham and Stevie Nicks as band members that they released their most commercially successful studio albums. Among these is Rumours, which topped American and British charts and has been included in multiple lists of the best albums.",
+		"blockquote": "If you wake up and don&apos;t want to smile <br />If it takes just a little while <br />Open your eyes and look at the day <br />You&apos;ll see things in a different way",
+		"cite": "Fleetwood Mac - Don&apos;t Stop"
+	},
+
 	"formations": [
 		{
 			"member": "Peter Green",
@@ -6,12 +15,6 @@
 			"duration": "1967 - 1970",
 			"summary": "lorem ipsum",
 			"picture": "fm-peter-green.jpg",
-			"details": [
-				{
-					"fact": "lorem ipsum",
-					"year": 1969
-				}
-			],
 			"albums": [
 				{
 					"name": "Fleetwood Mac (Self-titled I)",
@@ -36,12 +39,6 @@
 			"duration": "1970 - 1974",
 			"summary": "lorem ipsum",
 			"picture": "fm-bob-welche.jpg",
-			"details": [
-				{
-					"fact": "lorem ipsum",
-					"year": 1972
-				}
-			],
 			"albums": [
 				{
 					"name": "Future Games",
@@ -71,12 +68,6 @@
 			"duration": "1974 - Onward",
 			"summary": "lorem ipsum",
 			"picture": "fm-buckingham-nicks.jpg",
-			"details": [
-				{
-					"fact": "lorem ipsum",
-					"year": 1974
-				}
-			],
 			"albums": [
 				{
 					"name": "Fleetwood Mac (Self-titled II)",

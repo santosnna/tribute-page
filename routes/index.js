@@ -3,11 +3,11 @@ const formationRoute = require("./formations");
 const albumsRoute = require("./albums");
 
 module.exports = (params) => {
-	const { homePageService, formationService } = params;
+	const { formationService } = params;
 
 	router.get("/", async (req, res, next) => {
 		try {
-			const homepage = await homePageService.getData();
+			const homepage = await formationService.getData("homepage");
 			const membersList = await formationService.getMembersList();
 			const albumsList = await formationService.getAlbumsList();
 

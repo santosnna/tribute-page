@@ -19,22 +19,34 @@ class FormationService {
 	}
 
 	/**
-	 * Get album information provided a name
-	 * @param {*} name
+	 *
+	 * @param {*} name of the album being searched
+	 * @returns an object
 	 */
 	async getAlbum(name) {
-		const data = await this.getAlbumsList();
-		const album = data.find((element) => {
-			return element.name === name;
+		const list = await this.getAlbumsList();
+		const album = list.find((album) => {
+			return album.name === name;
 		});
-
-		console.log(album);
 		if (!album) return null;
 		return {
 			name: album.name,
 			released: album.released,
 			cover: album.cover,
 		};
+	}
+
+	/**
+	 *
+	 * @returns
+	 */
+	async getAlbumsList() {
+		const list = await this.getData();
+		return list
+			.map((formation) => {
+				return formation.albums;
+			})
+			.flat();
 	}
 
 	/**
@@ -51,6 +63,7 @@ class FormationService {
 			title: formation.title,
 			member: formation.member,
 			shortname: formation.shortname,
+			duration: formation.duration,
 			summary: formation.summary,
 			picture: formation.picture,
 			details: formation.details,
@@ -59,7 +72,8 @@ class FormationService {
 	}
 
 	/**
-	 * Get a list of formation
+	 * Get a list of formations
+	 * @returns array of formation names, shortnames, summary of the phase, pictures and albums
 	 */
 	async getFormationsList() {
 		const data = await this.getData();
@@ -67,6 +81,7 @@ class FormationService {
 			return {
 				member: formation.member,
 				shortname: formation.shortname,
+				duration: formation.duration,
 				summary: formation.summary,
 				picture: formation.picture,
 				details: formation.details,
@@ -76,19 +91,8 @@ class FormationService {
 	}
 
 	/**
-	 * Returns an array of albums (covers and names)
-	 */
-	async getAlbumsList() {
-		const list = await this.getData();
-		return list.map((formation) => {
-			for (const album of formation.albums) {
-				return album;
-			}
-		});
-	}
-
-	/**
-	 * Returns an array of formation names, short names and pictures
+	 * Fetches a list of band members
+	 * @returns array of member names, shortnames and pictures
 	 */
 	async getMembersList() {
 		const data = await this.getData();
@@ -104,11 +108,19 @@ class FormationService {
 	}
 
 	/**
-	 * Fetches formation data from the JSON file provided to the constructor
+	 * Fetches information from the JSON file provided to the constructor
+	 * @param {*} information
+	 * @returns JSON
 	 */
-	async getData() {
+	async getData(information) {
 		const data = await readFile(this.datafile, "UTF-8");
-		return JSON.parse(data).formations;
+
+		switch (information) {
+			case "homepage":
+				return JSON.parse(data).homepage;
+			default:
+				return JSON.parse(data).formations;
+		}
 	}
 }
 

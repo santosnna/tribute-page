@@ -57,6 +57,19 @@ footer {
   margin-bottom: 1rem;
 }
 
+img {
+  animation: slidein 1s ease;
+}
+@keyframes slidein {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 .mini {
   height: 100px;
 }

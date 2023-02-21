@@ -1,13 +1,11 @@
 const express = require("express");
 const path = require("path");
 
-const HomePageService = require("./services/HomePageService");
 const FormationService = require("./services/FormationService");
 const routes = require("./routes");
 
 const app = express();
-const homePageService = new HomePageService("./data/homepage.json");
-const formationService = new FormationService("./data/formations.json");
+const formationService = new FormationService("./data/data.json");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
@@ -27,7 +25,7 @@ app.use(async (req, res, next) => {
 	}
 });
 
-app.use("/", routes({ homePageService, formationService }));
+app.use("/", routes({ formationService }));
 
 app.use((err, req, res, next) => {
 	res.locals.message = err.message;
@@ -41,5 +39,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(3000, () => {
-	console.log(`Server listening on port 3000!`);
+	console.log("Server listening on port 3000!");
 });

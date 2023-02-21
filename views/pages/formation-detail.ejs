@@ -1,7 +1,7 @@
 <div class="container">
 	<section>
 		<article>
-			<h1><%=formation.member%></h1>
+			<h1><%=formation.member%> (<%= formation.duration %>)</h1>
 			<div class="row">
 				<div class="col-md-4">
 					<img
@@ -12,35 +12,25 @@
 				</div>
 				<div class="col-md-8 pl-lg-4">
 					<h2>Summary of this fase</h2>
-					<p>
-						<%= formation.summary %>
-
-		        </p>
-						<hr /> 
-						<p>					
-            <ul>
-							<% for(const detail of formation.details) {%>
-								<li><strong><%=detail.year%>:</strong> <%=detail.fact%></li>
-							<% } %>
-            </ul>
-					</p>
+					<p><%= formation.summary %></p>
 				</div>
 			</div>
-			</article>
-			<article class="mt-3">
+		</article>
+		<hr />
+		<article class="mt-3">
 			<h2>Albums from this phase</h2>
 			<div class="row">
 				<% for(const album of formation.albums) {%>
-					<a href="/albums/<%= album.name %>">
-						<div class="col-md-4">
-							<img
+				<a href="/albums/<%= album.name %>">
+					<div class="col-md-4">
+						<img
 							src="/img/<%= album.cover %>"
 							class="rounded"
 							alt="Cover of <%= album.name %>"
-							/>
-						</div>
-					</a>
-					<% } %>				
+						/>
+					</div>
+				</a>
+				<% } %>
 			</div>
 		</article>
 	</section>
